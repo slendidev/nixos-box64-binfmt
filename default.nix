@@ -474,8 +474,7 @@ let
 
     # SDL_stretch SDL STREACH ERROR
     SDL_audiolib
-    SDL2_image_2_6
-    SDL2_image_2_0
+    SDL2_image
     # SDL2_mixer SDL_mixer SDL2_mixer_2_0 # timidity error
     libcdada
     libgcc
