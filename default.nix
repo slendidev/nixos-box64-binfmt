@@ -13,7 +13,7 @@ in
 
 with lib;
 let
-  box64-bleeding-edge = inputs.self.packages.${system}.box64-bleeding-edge;
+  box64 = inputs.self.packages.${system}.box64;
 
   # Grouped common libraries needed for the FHS environment (64-bit ARM versions)
   steamLibs = with pkgs; [
@@ -670,7 +670,7 @@ let
     targetPkgs =
       pkgs:
       (with pkgs; [
-        box64-bleeding-edge
+        box64
         box86
         steam-run
         xdg-utils
@@ -756,7 +756,8 @@ let
 
     ${BOX64_VARS}
 
-    exec ${steamFHS}/bin/steam-fhs ${box64-bleeding-edge}/bin/box64-bleeding-edge "$@"
+    #exec ${steamFHS}/bin/steam-fhs ${box64}/bin/box64 "$@"
+    exec ${steamFHS}/bin/steam-fhs ${box64}/bin/box64 "$@"
   '';
 in
 {
@@ -853,7 +854,7 @@ in
           #!${pkgs.bash}/bin/sh
           ${BOX64_VARS}
 
-          exec ${steamFHS}/bin/steam-fhs ${box64-bleeding-edge}/bin/box64-bleeding-edge \
+          exec ${steamFHS}/bin/steam-fhs ${box64}/bin/box64 \
             ${pkgs.x86.bash}/bin/bash ${pkgs.x86.steam-unwrapped}/lib/steam/bin_steam.sh \
             -no-cef-sandbox \
             -cef-disable-gpu \
@@ -892,7 +893,7 @@ in
         steamx86Wrapper
         #pkgs.pkgsCross.gnu32.steam
         steamFHS
-        box64-bleeding-edge
+        box64
         pkgs.x86.bash # (now this one appears with whereis bash)
         # muvm
         # additional steam-run tools
