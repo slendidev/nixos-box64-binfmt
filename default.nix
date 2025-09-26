@@ -620,7 +620,7 @@ let
     owner = "ptitSeb";
     repo = "box64";
     rev = "main";
-    sha256 = "sha256-55kNxQ/aDIRFFp7qFrevQpAKHXa6VWbSSfyZGbm1kJ0=";
+    sha256 = "sha256-/2USXRtsmhnsR0DNPmidNQ4JV6Gs8k5W5RIIPu6u4V4=";
   };
 in
 
