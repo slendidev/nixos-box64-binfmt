@@ -95,7 +95,7 @@ let
     # Keep existing libraries and add:
     libudev-zero
     libusb1
-    ibus-engines.kkc
+    #ibus-engines.kkc
     gtk3
 
     xdg-utils
