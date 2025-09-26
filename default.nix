@@ -17,7 +17,7 @@ let
 
   # Grouped common libraries needed for the FHS environment (64-bit ARM versions)
   steamLibs = with pkgs; [
-    unityhub
+    #unityhub
     harfbuzzFull
     glibc
     glib.out
@@ -68,7 +68,6 @@ let
     ncurses
 
     libva
-    mesa.drivers
     mesa
     ncurses5
     ncurses6
@@ -211,7 +210,7 @@ let
     brotli.out
   ];
   steamLibsI686 = with pkgs.pkgsCross.gnu32; [
-    unityhub
+    #unityhub
     glibc
     glib.out
     gtk2
@@ -258,7 +257,7 @@ let
     vulkan-headers
     vulkan-loader
     vulkan-tools
-    mesa.drivers
+    mesa
     ncurses5
     ncurses6
     pkgs.curl.out
@@ -406,7 +405,7 @@ let
     vulkan-headers
     vulkan-loader
     vulkan-tools
-    mesa.drivers
+    mesa
     ncurses5
     ncurses6
     pkgs.curl.out
@@ -656,7 +655,7 @@ let
 
     # # vulkaninfo should work with CPU now, probably should remove if I MAKE THIS WORK
     # export VK_ICD_FILENAMES=${pkgs.swiftshader}/share/vulkan/icd.d/vk_swiftshader_icd.json; 
-    export VK_ICD_FILENAMES=${pkgs.mesa.drivers}/share/vulkan/icd.d/lvp_icd.aarch64.json; # or radeon_icd.aarch64.json?(no)
+    export VK_ICD_FILENAMES=${pkgs.mesa}/share/vulkan/icd.d/lvp_icd.aarch64.json; # or radeon_icd.aarch64.json?(no)
 
     #export BOX64_LD_LIBRARY_PATH="${
       lib.concatMapStringsSep ":" (pkg: "${pkg}/lib") (steamLibs)
