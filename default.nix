@@ -165,7 +165,7 @@ let
     sdlpop
     SDL_ttf
     SDL_net
-    SDL_gpu
+    #SDL_gpu
     SDL_gfx
     sdlookup
     SDL2_ttf
