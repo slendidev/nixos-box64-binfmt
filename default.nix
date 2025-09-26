@@ -110,7 +110,7 @@ let
     vulkan-validation-layers
     vulkan-tools # vulkaninfo
     shaderc # GLSL to SPIRV compiler - glslc
-    renderdoc # Graphics debugger
+    #renderdoc # Graphics debugger
     tracy # Graphics profiler
     vulkan-tools-lunarg # vkconfig
 
