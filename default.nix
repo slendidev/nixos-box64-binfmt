@@ -23,7 +23,7 @@ let
     libva mesa
     ncurses5 ncurses6 ncurses
     pkgs.curl.out
-    libcef # (https://github.com/ptitSeb/box64/issues/1383)?
+    cef-binary # (https://github.com/ptitSeb/box64/issues/1383)?
 
     libdbusmenu       # For libdbusmenu-glib.so.4 and libdbusmenu-gtk.so.4 # causing Error: detected mismatched Qt dependencies: when compiled for steamLibsI686
     xcbutilxrm       # XCB utilities
